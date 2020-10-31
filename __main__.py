@@ -5,10 +5,7 @@ from discord.ext import commands
 import logging
 import jokes
 
-logging.basicConfig(level=logging.INFO)
 client = commands.Bot(command_prefix='!')
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
 
 @client.event
 async def on_ready():
@@ -19,5 +16,12 @@ async def on_ready():
 async def joke(ctx):
     await ctx.send(jokes.getJoke())
 
+def main():
+    logging.basicConfig(level=logging.INFO)
+    load_dotenv()
+    TOKEN = os.getenv('DISCORD_TOKEN')
+    client.run(TOKEN)
+  
 
-client.run(TOKEN)
+if __name__ == "__main__":
+    main()
