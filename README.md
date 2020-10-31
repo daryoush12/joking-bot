@@ -2,7 +2,7 @@
 
 A discord bot for entertainment purposes.
 
-##Setup
+## Setup
 
 1. Clone or download the project
 
