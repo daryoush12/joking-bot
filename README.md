@@ -10,6 +10,6 @@ A discord bot for entertainment purposes.
 
 > DISCORD_TOKEN={your token}
 
-3. Run main file to see your bot action!
+3. Run main file to see your bot in action!
 
 
