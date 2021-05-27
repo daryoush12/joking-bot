@@ -14,7 +14,6 @@ welcomes = Welcomer
 async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
-
 @client.command()
 async def newgame(ctx):
    global game, welcomes
@@ -50,20 +49,16 @@ async def join(ctx):
    else:
       errormsg  = "```{} you are already in game or game has not been started yet!```"
       await ctx.send(errormsg.format(player))
-
      
 @client.command()
 async def players(ctx):
    global game
    await ctx.send(game.players)
 
-
 @client.command()
 async def score(ctx):
    global game
    await ctx.send(game.getCurrentScore())
-
-
 
 @client.command()
 async def close(ctx):
@@ -71,12 +66,9 @@ async def close(ctx):
    await ctx.send("```Closing game of dice!```\n"+game.getCurrentScore())
    game = None
 
-
 @client.command()
 async def pokemon(ctx, arg):
    await ctx.send(data.getPokemon(arg))
-
-
 
 def main():
     logging.basicConfig(level=logging.INFO)
